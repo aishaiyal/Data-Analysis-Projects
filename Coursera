@@ -20,6 +20,10 @@ airline_data =  pd.read_csv('https://cf-courses-data.s3.us.cloud-object-storage.
                             encoding = "ISO-8859-1",
                             dtype={'Div1Airport': str, 'Div1TailNum': str, 
                                    'Div2Airport': str, 'Div2TailNum': str})
+spacex_df = pd.read_csv("spacex_launch_dash.csv")
+max_payload = spacex_df['Payload Mass (kg)'].max()
+min_payload = spacex_df['Payload Mass (kg)'].min()
+spacex_df = spacex_df                                   
 
 
 # List of years 
